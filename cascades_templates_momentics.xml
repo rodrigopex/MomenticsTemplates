@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a GroupDataModel with the StandardListItem inside" enabled="true" name="ListView:StandardListItem">ListView {
+	id: ${id}
+	dataModel: GroupDataModel {
+		id: ${modelId}
+	}
+	listItemComponents: [
+		ListItemComponent {
+			type: "header"
+			Header {
+				title: ListItemData.${title}
+			}
+		},
+		ListItemComponent {
+			type: "item"
+			StandardListItem {
+				title: ListItemData.${title}
+				status: ListItemData.${status}
+				imageSource: ListItemData.${imagerSource}
+			}
+		}
+	]
+}</template></templates>
