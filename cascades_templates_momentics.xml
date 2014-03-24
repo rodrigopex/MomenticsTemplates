@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a GroupDataModel with the StandardListItem inside" enabled="true" name="ListView:StandardListItem">ListView {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain Button" enabled="true" id="QML.Button" name="Button">Button {
+    id: ${buttonID}
+    text: "${text}"
+    onClicked: {
+        ${cursor}
+    }
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain Container" enabled="true" id="QML.Container" name="Container">Container {
+    id: ${containerID}
+    ${cursor}
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain ImageView" enabled="true" id="QML.ImageView" name="ImageView">ImageView {
+    id: ${imageViewID}
+    imageSource: "${imageSource}"
+    preferredWidth: ${width}
+    preferredHeight: ${height}
+	${cursor}
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain Label" enabled="true" id="QML.Label" name="Label">Label {
+    id: ${labelID}
+    text: "${text}"
+	${cursor}
+}</template><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a ListView with an ArrayDataModel" enabled="true" name="List:Array">ListView {
+	id: test
+	dataModel: ArrayDataModel {
+		id: arr
+	}
+	listItemComponents: [
+		ListItemComponent {
+			${cursor}
+		}
+	]
+}</template><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a GroupDataModel with the StandardListItem inside" enabled="true" name="ListView:StandardListItem">ListView {
 	id: ${id}
 	dataModel: GroupDataModel {
 		id: ${modelId}
@@ -19,4 +48,28 @@
 			}
 		}
 	]
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Generic Object" enabled="true" id="QML.Object" name="Object">${objectName} {
+    ${cursor}
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain Page" enabled="true" id="QML.Page" name="Page">Page {
+    id: ${pageID}
+    ${cursor}
+}</template><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a QML property " enabled="true" name="property">property ${variant} ${name} : ${initialization}
+${cursor}</template><template autoinsert="true" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Create a Sheet with a Page and Container inside" enabled="true" name="Sheet&gt;Page&gt;Container">Sheet {
+	id: self
+	Page {
+		Container {
+			${cursor}
+		}
+	}
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain Slider" enabled="true" id="QML.Slider" name="Slider">Slider {
+    id: ${sliderID}
+    fromValue: ${0}
+    toValue: ${1}
+    preferredWidth: ${preferredWidth}
+    onImmediateValueChanged: {
+        ${cursor}
+    }
+}</template><template autoinsert="false" context="com.rim.tad.tools.qml.core.codetemplates.contentType" deleted="false" description="Plain StackLayout" enabled="true" id="QML.StackLayout" name="StackLayout">StackLayout {
+    orientation: LayoutOrientation.${TopToBottom}
+    ${cursor}
 }</template></templates>
